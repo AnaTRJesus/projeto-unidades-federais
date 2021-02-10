@@ -18,3 +18,35 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+  
+  
+  A execução do projeto é realizada através do comando mix phx.server
+  
+  Seguem alguns curls para a utlização dos endpoints:
+  
+  Criação de estado 
+  
+  curl --location --request POST 'http://localhost:4000/estado' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "nome" : "Sao Paulo",
+    "sigla": "SP"
+}'
+
+	Criação de município
+	
+	curl --location --request POST 'http://localhost:4000/municipio' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "nome" : "Jandira",
+    "estado_id": 4
+}'
+
+	Foram implementados os endpoints:
+	
+	- GET
+	- POST
+	- PUT
+	- Delete
+	
+	Para a API de estado e para a API de municípios
